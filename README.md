@@ -74,12 +74,12 @@ The application is structured into three logical tiers:
 - Create `/users` resource
 - Enable GET method with Lambda proxy integration
 - Deploy API
-
+![Three-Tier Web Application Architecture](logic-layer/l3.png)
 ### 5️⃣ Create DynamoDB Table
 - Table name: `UserData`
 - Partition key: `userId` (String)
 - Insert sample user data
-
+![Three-Tier Web Application Architecture](dynamo-db/d1.png)
 ### 6️⃣ Integrate Frontend with API
 - Update `script.js` to call API Gateway
 - Upload updated files to S3
@@ -95,40 +95,8 @@ The application is structured into three logical tiers:
 - User data is fetched and displayed on the website
 
 ---
+![Three-Tier Web Application Architecture](architecture/output2.png)
 
-## 📸 Screenshots
-
-📂 Presentation Tier
-1. S3 bucket with uploaded files
-2. CloudFront distribution overview
-3. CloudFront domain working in browser
-
-📂 Logic Tier
-4. Lambda function code
-5. API Gateway `/users` GET method
-6. API Gateway invoke URL working in browser
-
-📂 Data Tier
-7. DynamoDB table structure
-8. DynamoDB item (userId, name, email)
-
-📂 Final Result
-9. Website UI before entering userId
-10. Website UI after fetching user data
-11. CloudFront invalidation screen (optional)
-
-> **Tip:** Blur account IDs if visible.
-
----
-
-## 🔐 Security Best Practices
-
-- Origin Access Control for S3
-- Restricted CORS to CloudFront domain
-- IAM least privilege access for Lambda
-- No public database access
-
----
 
 ## 📈 What I Learned
 
@@ -142,5 +110,5 @@ The application is structured into three logical tiers:
 
 ## 🙌 Author
 
-**Your Name**  
+**Emaan Chaudhary**  
 AWS Enthusiast | Cloud Learner
