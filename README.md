@@ -24,7 +24,7 @@ The application is structured into three logical tiers:
 
 ## 🧩 Architecture Diagram
 
-![Three-Tier Web Application Architecture](architecture/three-tier.png)
+![Three-Tier Web Application Architecture](architecture/threetier-arc.png)
 
 
 ---
@@ -57,16 +57,17 @@ The application is structured into three logical tiers:
 ### 1️⃣ Create S3 Bucket
 - Store static website files (`index.html`, `script.js`, `style.css`)
 - Upload website files
-
+![Three-Tier Web Application Architecture](presentation-layer/p1.png)
 ### 2️⃣ Configure CloudFront
 - Create CloudFront distribution
 - Connect S3 bucket using Origin Access Control (OAC)
 - Set default root object to `index.html`
-
+![Three-Tier Web Application Architecture](presentation-layer/p2.png)
 ### 3️⃣ Create Lambda Function
 - Node.js Lambda function
 - Fetch user data from DynamoDB
 - Return JSON response with CORS headers
+  ![Three-Tier Web Application Architecture](logic-layer/l1.png)
 
 ### 4️⃣ Set Up API Gateway
 - Create REST API
