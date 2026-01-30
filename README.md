@@ -24,7 +24,7 @@ The application is structured into three logical tiers:
 
 ## 🧩 Architecture Diagram
 
-![Three-Tier Web Application Architecture](architecture/threetier-arc.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/architecture/threetier-arc.png?raw=true)
 
 
 ---
@@ -57,29 +57,29 @@ The application is structured into three logical tiers:
 ### 1️⃣ Create S3 Bucket
 - Store static website files (`index.html`, `script.js`, `style.css`)
 - Upload website files
-![Three-Tier Web Application Architecture](presentation-layer/p1.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/presentation-layer/p1.png?raw=true)
 ### 2️⃣ Configure CloudFront
 - Create CloudFront distribution
 - Connect S3 bucket using Origin Access Control (OAC)
 - Set default root object to `index.html`
-![Three-Tier Web Application Architecture](presentation-layer/p2.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/presentation-layer/p2.png?raw=true)
 ### 3️⃣ Create Lambda Function
 - Node.js Lambda function
 - Fetch user data from DynamoDB
 - Return JSON response with CORS headers
-  ![Three-Tier Web Application Architecture](logic-layer/l1.png)
+  ![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/logic-layer/l1.png?raw=true)
 
 ### 4️⃣ Set Up API Gateway
 - Create REST API
 - Create `/users` resource
 - Enable GET method with Lambda proxy integration
 - Deploy API
-![Three-Tier Web Application Architecture](logic-layer/l3.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/logic-layer/l3.png?raw=true)
 ### 5️⃣ Create DynamoDB Table
 - Table name: `UserData`
 - Partition key: `userId` (String)
 - Insert sample user data
-![Three-Tier Web Application Architecture](dynamo-db/d1.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/dynamo-db/d1.png?raw=true)
 ### 6️⃣ Integrate Frontend with API
 - Update `script.js` to call API Gateway
 - Upload updated files to S3
@@ -95,7 +95,7 @@ The application is structured into three logical tiers:
 - User data is fetched and displayed on the website
 
 ---
-![Three-Tier Web Application Architecture](architecture/output2.png)
+![Three-Tier Web Application Architecture](https://github.com/Emaan-Chaudhary/aws-three-tier-web-app/blob/main/architecture/output2.png?raw=true)
 
 
 ## 📈 What I Learned
